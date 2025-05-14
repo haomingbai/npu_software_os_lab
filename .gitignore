@@ -1,0 +1,7 @@
+*
+!*/
+!*.c
+*.mod.c
+!Makefile
+*/build/
+*/build
