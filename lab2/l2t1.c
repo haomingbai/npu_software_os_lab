@@ -21,7 +21,7 @@ static int thread_fn(void *parm) {
 }
 
 static int __init init_func(void) {
-  printk(KERN_INFO "The first module of lab1 is loaded\n");
+  printk(KERN_INFO "The first module of lab2 is loaded\n");
   thread = kthread_run(thread_fn, NULL, "l2t1");
   return 0;
 }
