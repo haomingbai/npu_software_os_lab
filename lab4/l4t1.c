@@ -15,8 +15,8 @@
 #include "linux/printk.h"
 
 /* Define these values to match your devices */
-#define USB_DETECT_VENDOR_ID 0x058f
-#define USB_DETECT_PRODUCT_ID 0x6387
+#define USB_DETECT_VENDOR_ID 0x0781
+#define USB_DETECT_PRODUCT_ID 0x5591
 
 /* table of devices that work with this driver */
 static const struct usb_device_id usbdetect_table[] = {
