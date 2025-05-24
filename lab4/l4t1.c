@@ -12,10 +12,11 @@
 #include <linux/slab.h>
 #include <linux/uaccess.h>
 #include <linux/usb.h>
+#include "linux/printk.h"
 
 /* Define these values to match your devices */
-#define USB_DETECT_VENDOR_ID 0x058f
-#define USB_DETECT_PRODUCT_ID 0x6387
+#define USB_DETECT_VENDOR_ID 0x0781
+#define USB_DETECT_PRODUCT_ID 0x5591
 
 /* table of devices that work with this driver */
 static const struct usb_device_id usbdetect_table[] = {
@@ -79,6 +80,7 @@ static struct usb_class_driver usbdetect_class = {
 
 static int usbdetect_probe(struct usb_interface *interface,
                            const struct usb_device_id *id) {
+  printk(KERN_ERR "Load haomingbai's usb device");
   struct usb_detect *dev;
   struct usb_endpoint_descriptor *bulk_in, *bulk_out;
   int retval;
@@ -149,6 +151,7 @@ error:
 }
 
 static void usbdetect_disconnect(struct usb_interface *interface) {
+  printk(KERN_ERR "Unload haomingbai's usb device");
   struct usb_detect *dev;
   // int minor = interface->minor;
   u16 idVendor, idProduct;
