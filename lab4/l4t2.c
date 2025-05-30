@@ -28,7 +28,7 @@ static int thread_fn(void *param) {
   typedef char *BKString;
   BKString path = "/test_file";
   size_t single_size = 1 << 20;
-  size_t times = 512;
+  size_t times = 4096;
   void *data = kmalloc(single_size, GFP_KERNEL);
   if (data == NULL) {
     printk(KERN_ERR "Memory alloc failed!");
