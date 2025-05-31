@@ -3,5 +3,6 @@
 !*.c
 *.mod.c
 !Makefile
+!lab3/testfile
 */build/
 */build
